@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/search"
+        android:icon="@drawable/ic_baseline_search_24"
+        android:title="Search"
+        app:showAsAction="ifRoom|withText"
+        app:actionViewClass="android.widget.SearchView" />
+
+
+
+    <item
+        android:id="@+id/search_options"
+        android:title="@string/search_settings"
+        app:showAsAction="never"
+        >
+
+        <menu>
+
+            <item
+                android:id="@+id/search_by_name"
+                android:title="Name"/>
+
+            <item
+                android:id="@+id/search_by_first_letter"
+                android:title="First letter"/>
+
+            <item
+                android:id="@+id/search_random"
+                android:title="Random"/>
+
+        </menu>
+
+    </item>
+
+
+    <item
+        android:id="@+id/favorites_list"
+        android:title="@string/favorites_list"
+        app:showAsAction="never"
+        />
+
+    <item
+        android:id="@+id/clear_favorites"
+        android:title="@string/clear_favorites"
+        app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/sign_out"
+        android:title="@string/sing_out"
+        />
+
+
+
+</menu>

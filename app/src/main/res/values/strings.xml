@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Cocktail shop</string>
+    <string name="sing_out">Sign Out</string>
+    <string name="clear_favorites">Clear favorites</string>
+    <string name="favorites_list">Favorites list</string>
+    <string name="select">Select search method</string>
+    <string name="search_settings">Search settings</string>
+</resources>
