@@ -8,6 +8,7 @@ import android.view.Menu
 import android.view.MenuItem
 import android.view.View
 import android.widget.*
+import androidx.appcompat.app.AlertDialog
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.colocviu2.Adapters.DrinksAdapter
@@ -87,15 +88,31 @@ class DrinksList : AppCompatActivity() {
 
         when(item.itemId){
             R.id.sign_out ->{
-                val intent = Intent(this, MainActivity::class.java)
-                startActivity(intent)
+
+
+                val signOutBox = AlertDialog.Builder(this)
+                signOutBox.setTitle("Are you sure you want to sign out?")
+                    .setPositiveButton("Sign out") { _, _ ->
+                        finish()
+                    }
+                    .setNegativeButton("Cancel", null)
+                    .create()
+                    .show()
             }
             R.id.favorites_list ->{
                 val intent = Intent(this, FavoritesListActivity::class.java)
                 startActivity(intent)
             }
             R.id.clear_favorites -> {
-                FavoritesList.drinks.clear()
+
+                val signOutBox = AlertDialog.Builder(this)
+                signOutBox.setTitle("Are you sure you want to clear the favorites list?")
+                    .setPositiveButton("Confirm") { _, _ ->
+                        FavoritesList.drinks.clear()
+                    }
+                    .setNegativeButton("Cancel", null)
+                    .create()
+                    .show()
             }
 
             R.id.search_by_name ->{
